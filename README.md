@@ -18,9 +18,19 @@ Seed the database:
 
 ```docker-compose -f docker-compose-dev.yml run users python manage.py recreate_db```
 
+### Testing/Coverage/Linting
+
 Run the tests:
 
 ```docker-compose -f docker-compose-dev.yml run users python manage.py test```
+
+Run the linter:
+
+```docker-compose -f docker-compose-dev.yml run users flake8 project```
+  
+Run coverage:
+
+```docker-compose -f docker-compose-dev.yml run users python manage.py coverage```
 
 ### Other Commands:
 

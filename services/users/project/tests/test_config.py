@@ -43,9 +43,6 @@ class TestProductionConfig(TestCase):
         app.config.from_object('project.config.ProductionConfig')
         return app
 
-    def create_app(self):
-        return create_app()
-
     def test_app_is_production(self):
         self.assertTrue(app.config['SECRET_KEY'] == 'my_precious')
         self.assertFalse(app.config['TESTING'])
