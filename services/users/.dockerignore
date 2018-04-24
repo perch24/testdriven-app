@@ -3,4 +3,6 @@ venv
 .env
 Dockerfile-dev
 Dockerfile-prod
-/htmlcov/
+htmlcov
+migrations
+
