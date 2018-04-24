@@ -5,6 +5,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 ## Table of Contents
 
+- [Custom](#custom)
 - [Updating to New Releases](#updating-to-new-releases)
 - [Sending Feedback](#sending-feedback)
 - [Folder Structure](#folder-structure)
@@ -102,6 +103,17 @@ You can find the most recent version of this guide [here](https://github.com/fac
   - [Moment.js locales are missing](#momentjs-locales-are-missing)
 - [Alternatives to Ejecting](#alternatives-to-ejecting)
 - [Something Missing?](#something-missing)
+
+
+## Custom
+
+Tests are written using Jest and Enzyme. To run the tests...
+
+```yarn test```
+
+Show test coverage...
+
+```react-scripts test --coverage```
 
 ## Updating to New Releases
 
