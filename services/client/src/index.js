@@ -69,7 +69,6 @@ class App extends Component {
         const obj = {};
         obj[event.target.name] = event.target.value;
         this.setState(obj);
-        console.log(this.state)
     };
 };
 
