@@ -6,6 +6,7 @@ import Form from './components/Form';
 import Logout from './components/Logout';
 import NavBar from './components/NavBar';
 import UsersList from './components/UsersList';
+import UserStatus from './components/UserStatus';
 import AddUser from './components/AddUser';
 
 export default class App extends Component {
@@ -101,7 +102,7 @@ export default class App extends Component {
     render() {
         return (
             <div>
-                <NavBar title={this.state.title}/>
+                <NavBar title={this.state.title} isAuthenticated={this.state.isAuthenticated}/>
                 <div className="container">
 
                     <div className="row">
@@ -145,6 +146,11 @@ export default class App extends Component {
                                 <Route exact path='/logout' render={() => (
                                     <Logout
                                         logoutUser={this.logoutUser}
+                                        isAuthenticated={this.state.isAuthenticated}
+                                    />
+                                )}/>
+                                <Route exact path='/status' render={() => (
+                                    <UserStatus
                                         isAuthenticated={this.state.isAuthenticated}
                                     />
                                 )}/>
