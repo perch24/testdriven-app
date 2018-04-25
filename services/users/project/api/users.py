@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify, request, render_template
+from flask import Blueprint, jsonify, request, render_template, current_app as app
 from sqlalchemy import exc
 
 from project import db
@@ -50,8 +50,9 @@ def add_user():
         else:
             response_object['message'] = 'Sorry. That email already exists.'
             return jsonify(response_object), 400
-    except (exc.IntegrityError, ValueError):
+    except (exc.IntegrityError, ValueError) as e:
         db.session.rollback()
+        app.logger.error("Caught exception adding user", e)
         return jsonify(response_object), 400
 
 
