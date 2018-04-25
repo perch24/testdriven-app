@@ -9,3 +9,4 @@ flask-cors==3.0.3
 flask-debugtoolbar==0.10.1
 gunicorn==19.7.1
 psycopg2-binary==2.7.4
+pyjwt==1.6.1
